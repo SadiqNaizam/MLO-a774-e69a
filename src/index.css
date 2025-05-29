@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,50 +37,45 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 33.3% 14.1%; /* PRD background #1A1A2E */
+    --foreground: 0 0% 100%; /* PRD primaryText #FFFFFF */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 236.9 39.2% 21.6%; /* PRD surface #22244C */
+    --card-foreground: 0 0% 100%; /* PRD primaryText #FFFFFF */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 236.9 39.2% 21.6%; /* PRD surface #22244C */
+    --popover-foreground: 0 0% 100%; /* PRD primaryText #FFFFFF */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 177.8 83.1% 50.6%; /* PRD accentTeal #15EADD */
+    --primary-foreground: 240 33.3% 14.1%; /* PRD background #1A1A2E (for contrast on teal) */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 236.9 39.2% 21.6%; /* PRD surface #22244C (for secondary buttons) */
+    --secondary-foreground: 0 0% 100%; /* PRD primaryText #FFFFFF (text on surface) */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 236.9 39.2% 21.6%; /* PRD surface #22244C (for muted backgrounds) */
+    --muted-foreground: 232.5 14.9% 72.7%; /* PRD secondaryText #B0B0C3 */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 177.8 83.1% 50.6%; /* PRD accentTeal #15EADD */
+    --accent-foreground: 240 33.3% 14.1%; /* PRD background #1A1A2E (for contrast on teal) */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 68.6%; /* PRD accentRed #FF5F5F */
+    --destructive-foreground: 0 0% 100%; /* PRD primaryText #FFFFFF (text on red) */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 237 39% 25%; /* Slightly lighter shade of surface for borders */
+    --input: 236.9 39.2% 21.6%; /* PRD surface #22244C (input background) */
+    --ring: 177.8 83.1% 50.6%; /* PRD accentTeal #15EADD (focus ring) */
+    
+    /* Preserved sidebar variables as PRD doesn't specify them */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,5 +94,8 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Roboto', sans-serif; /* Apply primaryFont from PRD */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
