@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
 	darkMode: ["class"],
@@ -52,6 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        // Colors for PRD specific utility classes
+        primaryText: 'hsl(var(--foreground))', // Maps to PRD primaryText (#FFFFFF)
+        secondaryText: 'hsl(var(--muted-foreground))', // Maps to PRD secondaryText (#B0B0C3)
+        surface: 'hsl(var(--card))', // Maps to PRD surface (#22244C)
+        accentTeal: 'hsl(var(--primary))', // Maps to PRD accentTeal (#15EADD)
+        accentRed: 'hsl(var(--destructive))', // Maps to PRD accentRed (#FF5F5F)
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -63,6 +70,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+        sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+      },
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
